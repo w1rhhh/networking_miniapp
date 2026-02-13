@@ -1,10 +1,10 @@
 /* Шрифт UNCAGE-BOLD: положите Uncage-Bold.woff2 / .woff / .ttf в папку fonts/ */
 @font-face {
   font-family: 'UNCAGE-BOLD';
-  src: url('fonts/Uncage-Bold.woff2') format('woff2'),
+  src: url('fonts/uncage.ttf') format('truetype'),
+       url('fonts/Uncage-Bold.woff2') format('woff2'),
        url('fonts/Uncage-Bold.woff') format('woff'),
-       url('fonts/Uncage-Bold.ttf') format('truetype'),
-       url('fonts/uncage.ttf') format('truetype');
+       url('fonts/Uncage-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
