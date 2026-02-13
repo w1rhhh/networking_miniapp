@@ -67,11 +67,7 @@ body {
   max-width: 440px;
   z-index: -1;
   /* 45deg: синий вверху слева, чёрный внизу справа */
-  background: radial-gradient(circle at 0px 138%, var(--color-bg-blue) 0%,
-    #0e1828 38%,
-    #0c1220 51%,
-    var(--color-bg-black) 79%
-  );
+  background: radial-gradient(287.18% 256.55% at 5.47% 142.85%, #2A7F9A 0%, #227A95 2.55%, #1B647B 8.4%, #10495A 16.35%, #083544 22.6%, #0E2933 27.7%, #131E27 33.17%, #060607 42.77%, #060606 50%, #000 78.54%);
   pointer-events: none;
 }
 
