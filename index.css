@@ -1,10 +1,10 @@
 /* Шрифт UNCAGE-BOLD: положите Uncage-Bold.woff2 / .woff / .ttf в папку fonts/ */
 @font-face {
   font-family: 'UNCAGE-BOLD';
-  src: url('fonts/uncage.ttf') format('truetype'),
-       url('fonts/Uncage-Bold.woff2') format('woff2'),
+  src: url('fonts/Uncage-Bold.woff2') format('woff2'),
        url('fonts/Uncage-Bold.woff') format('woff'),
-       url('fonts/Uncage-Bold.ttf') format('truetype');
+       url('fonts/Uncage-Bold.ttf') format('truetype'),
+       url('fonts/uncage.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 :root {
   --font-main: 'UNCAGE-BOLD', 'Impact', 'Arial Black', sans-serif;
   /* Фон: синий внизу справа (чуть ярче), чёрный вверху слева */
-  --color-bg-black: #0C0D17;
+  --color-bg-black: #000000;
   --color-bg-blue: #153a5c;
   /* Золотые плашки (Figma): светлый желто-золотой → бронзовый */
   --color-gold-left: #FDD87D;
@@ -39,9 +39,14 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font-main);
+  background: radial-gradient(circle at 0px 138%, var(--color-bg-blue) 0%,
+    #0e1828 38%,
+    #0c1220 51%,
+    var(--color-bg-black) 79%
+  );
   color: var(--color-white);
   -webkit-font-smoothing: antialiased;
-  background: var(--color-bg-black);
+
 }
 
 /* Градиент: от левого нижнего (синий) до правого верхнего (чёрный), в зоне контента/кнопок */
@@ -62,12 +67,10 @@ body {
   max-width: 440px;
   z-index: -1;
   /* 45deg: синий вверху слева, чёрный внизу справа */
-  background: linear-gradient(
-    45deg,
-    var(--color-bg-blue) 0%,
-    #0e1828 35%,
-    #0c1220 70%,
-    var(--color-bg-black) 100%
+  background: radial-gradient(circle at 0px 138%, var(--color-bg-blue) 0%,
+    #0e1828 38%,
+    #0c1220 51%,
+    var(--color-bg-black) 79%
   );
   pointer-events: none;
 }
