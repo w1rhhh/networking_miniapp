@@ -22,6 +22,22 @@
   --bar-inset: 6px;
 }
 
+html, body {
+  overflow: hidden; /* Запрещает прокрутку самого окна браузера */
+  height: 100%;
+  position: fixed; /* Фиксирует страницу, чтобы она не «плавала» */
+  width: 100%;
+  touch-action: none; /* Полностью отключает все стандартные жесты браузера (включая зум) */
+}
+
+.page {
+  height: 100vh;
+  overflow-y: auto; /* Позволяет скроллить только внутри вашего контейнера */
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y; /* Разрешает только вертикальный скролл внутри контента */
+}
+
+
 *,
 *::before,
 *::after {

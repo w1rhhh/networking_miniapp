@@ -25,7 +25,7 @@
 
     <main class="main">
       <!-- Замените href на ваши реальные ссылки -->
-      <a href="https://example.com/club-card" class="btn btn--primary" target="_self" rel="noopener">
+      <a href="https://example.com/club-card" class="btn btn--primary" target="_blank" rel="noopener">
         <span class="btn__bar"></span>
         <span class="btn__icon" aria-hidden="true">
           <img src="icons/icon2.svg" alt="">
@@ -83,5 +83,23 @@
       </section>
     </main>
   </div>
+  <script>
+  // Инициализация WebApp
+  const tg = window.Telegram.WebApp;
+  tg.ready();
+  tg.expand(); // Разворачивает приложение на всю высоту
+
+  // Запрет свайпа вниз (чтобы не закрывалось при скролле)
+  tg.disableVerticalSwipes(); 
+
+  // Блокировка программного зума (жестов)
+  document.addEventListener('touchstart', (e) => {
+    if (e.touches.length > 1) e.preventDefault(); // Запрет мультитача (зума)
+  }, { passive: false });
+
+  document.addEventListener('gesturestart', (e) => {
+    e.preventDefault(); // Запрет жестов масштабирования в Safari/iOS
+  });
+</script>
 </body>
 </html>
