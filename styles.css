@@ -89,7 +89,7 @@ body {
 
 .content {
   position: relative;
-  padding: 16px 20px 0;
+  padding: 0px 10px 0;
 }
 
 .divider {
@@ -262,6 +262,7 @@ body {
 .cta:active {
   transform: translateY(1px) scale(0.99);
 }
+
 
 
 
