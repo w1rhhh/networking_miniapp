@@ -18,6 +18,15 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MyFont';
+  src: url('UNCAGE-Bold.ttf') format('ttf');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 body {
   min-height: 100vh;
   font-family: 'Inter', 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont,
@@ -260,4 +269,5 @@ body {
 .cta:active {
   transform: translateY(1px) scale(0.99);
 }
+
 
