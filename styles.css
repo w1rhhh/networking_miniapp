@@ -13,12 +13,10 @@ body {
 
 @font-face {
   font-family: 'UNCAGE';
-  src: url('UNCAGE-Bold.ttf') format('ttf');
-  font-display: swap;
+  src: url('fonts/uncage.ttf') format('truetype'); 
   font-weight: 700;
   font-style: normal;
 }
-
 
 body {
   min-height: 100vh;
@@ -95,11 +93,11 @@ body {
 .divider {
   height: 2px;
   width: 100%;
-  margin: 8px 0 10px;
 }
 
 .divider--gold {
   background: linear-gradient(90deg, #dcbe6c 2.4%, #b4842f 50.5%, #e9cc76 100%);
+  border-radius: 999px;
 }
 
 .divider-image {
@@ -112,11 +110,13 @@ body {
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'UNCAGE';
-  background:,
+  font-family: 'UNCAGE', 'Inter', 'Noto Sans', system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(90deg, #ffffff, #ffffff),
     linear-gradient(90deg, #dcbe6c 2.4%, #b4842f 50.5%, #e9cc76 100%);
   -webkit-background-clip: text;
   background-clip: text;
+  
 }
 
 .headline--main {
@@ -133,7 +133,7 @@ body {
 }
 
 .price-card {
-  margin: 16px auto 24px;
+  margin: 20px auto 24px;
   width: 260px;
   height: 60px;
   border-radius: 16px;
@@ -155,7 +155,7 @@ body {
 .price-card__text {
   position: relative;
   text-align: center;
-  font-size: 20px;
+  font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
   font-family: 'UNCAGE', 'Inter', 'Noto Sans', system-ui, -apple-system,
@@ -181,7 +181,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 20px;
   color: #ffffff;
   font-family: 'UNCAGE', 'Inter', 'Noto Sans', system-ui, -apple-system,
     BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -191,9 +191,9 @@ body {
 
 .cta__accent {
   position: absolute;
-  left: 6px;
-  top: 6px;
-  bottom: 6px;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
   width: 12px;
   border-radius: 20px 0 0 20px;
   background: linear-gradient(180deg, #dcbe6c, #b4842f 50%, #e9cc76 100%);
@@ -260,10 +260,4 @@ body {
 .cta:active {
   transform: translateY(1px) scale(0.99);
 }
-
-
-
-
-
-
 
