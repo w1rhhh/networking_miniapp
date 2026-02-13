@@ -117,7 +117,6 @@ body {
     linear-gradient(90deg, #dcbe6c 2.4%, #b4842f 50.5%, #e9cc76 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .headline--main {
@@ -261,6 +260,7 @@ body {
 .cta:active {
   transform: translateY(1px) scale(0.99);
 }
+
 
 
 
