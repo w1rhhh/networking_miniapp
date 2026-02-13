@@ -1,146 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Интервью с экспертом</title>
-    <!-- Интер и Noto Sans с Google Fonts, максимально приближённо к макету -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <div class="page">
-      <main class="screen">
-        <!-- Верхний блок с фото -->
-        <header class="hero">
-          <div class="hero__image">
-            <img src="./interview.png" alt="Интервью с экспертом" />
-          </div>
-
-        </header>
-        <div class="divider divider--gold"></div>
-        <!-- Основной контент -->
-        <section class="content">
-          
-
-          <h1 class="headline headline--main">
-            🎤 Интервью с экспертом:
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Клуб предпринимателей — Полезные связи</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- Подключите файл UNCAGE-BOLD (woff2/woff/ttf) в styles.css или сюда -->
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-row">
+          <img src="icons/icon1.svg" alt="Логотип" class="logo">
+          <h1 class="title">
+            <span class="title-line">КЛУБ</span>
+            <span class="title-line">ПРЕДПРИНИМАТЕЛЕЙ</span>
+            <span class="title-line title-line--accent">ПОЛЕЗНЫЕ СВЯЗИ</span>
           </h1>
+        </div>
+      </div>
+    </header>
 
-          <p class="text-block">
-            <span class="highlight-line"
-              >Поделись историей создания своего бизнеса</span
-            ><br />
-            <span
-              >Даже если вы не профессиональный спикер, мы поможем вам
-              подготовиться к интервью и записать видео в трендовом
-              формате</span
-            >
-          </p>
+    <main class="main">
+      <!-- Замените href на ваши реальные ссылки -->
+      <a href="https://example.com/club-card" class="btn btn--primary" target="_blank" rel="noopener">
+        <span class="btn__bar"></span>
+        <span class="btn__icon" aria-hidden="true">
+          <img src="icons/icon2.svg" alt="">
+        </span>
+        <span class="btn__text">КЛУБНАЯ КАРТА<br>СООБЩЕСТВА</span>
+      </a>
 
-          <div class="divider divider--gold"></div>
+      <section class="services">
+        <h2 class="services__title">УСЛУГИ ДЛЯ ПРОДВИЖЕНИЯ ВАШЕГО БИЗНЕСА</h2>
 
-          <h2 class="headline">
-            🔍 Подготовка к интервью:
-          </h2>
-          <p class="text-block">
-            Мы поможем сформулировать ключевые моменты вашего бизнеса и
-            подготовим сценарий.
-          </p>
-
-          <div class="divider divider--gold"></div>
-
-          <h2 class="headline">
-            🎥 Съёмка профессионалами:
-          </h2>
-          <p class="text-block">
-            <span class="highlight-line"
-              >Ваши идеи будут представлены<br />в лучшем свете!</span
-            ><br />
-            <span
-              >Формат выездной съёмки, локацию согласовываем отдельно.</span
-            >
-          </p>
-
-          <div class="divider divider--gold"></div>
-
-          <h2 class="headline">
-            ✂️ Монтаж видео:
-          </h2>
-          <p class="text-block">
-            Создадим стильный, привлекательный и вовлекающий в вашу историю
-            контент:
-          </p>
-          <p class="text-block bundle">
-            <span class="bundle__line">полноформатное интервью</span>
-            <span class="bundle__middle">
-              <span class="bundle__plus">+</span>
-              <span class="bundle__middle-text">3 reels</span>
-              <span class="bundle__plus">+</span>
+        <nav class="services-list">
+          <a href="interview.html" class="btn btn--service" target="_blank" rel="noopener">
+            <span class="btn__bar"></span>
+            <span class="btn__icon" aria-hidden="true">
+              <img src="icons/icon3.svg" alt="">
             </span>
-            <span class="bundle__line">видеоролик для социальных сетей</span>
-          </p>
-
-          <div class="divider divider--gold"></div>
-
-          <h2 class="headline">
-            🌐 Размещение в соц. сетях:
-          </h2>
-          <p class="text-block">
-            Охват целевой аудитории 5000-7000 просмотров.<br />
-            Индивидуальная стратегия продвижения под ваши цели.<br />
-            Уникальная история вашего предпринимательского пути.<br />
-            Нативная реклама вашего бизнеса.<br />
-            Популяризация личного бренда предпринимателя и бренда компании.
-          </p>
-
-          <div class="price-card">
-            <div class="price-card__border"></div>
-            <div class="price-card__text">
-              <div>СТОИМОСТЬ ИНТЕРВЬЮ:</div>
-              <div>ОТ 23 000 ТЫС. РУБ</div>
-            </div>
-          </div>
-
-          <!-- Кнопка с переходом в ЛС Telegram -->
-          <a
-            class="cta"
-            href="https://t.me/polesniyesvyazi_admin?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BD%D0%B0%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D1%8C%D1%8E"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span class="cta__accent"></span>
-            <span class="cta__icon">
-              <svg
-                width="52"
-                height="52"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  d="M9.5 13.5 10 17l2-2 4 3.5 3-13L3 11l4.5 1.5 9-5.5-7 6.5Z"
-                  fill="none"
-                  stroke="#f6d98b"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-            <span class="cta__text">УЗНАТЬ ПОДРОБНЕЕ</span>
+            <span class="btn__text">ИНТЕРВЬЮ С<br>ЭКСПЕРТОМ</span>
           </a>
-        </section>
-      </main>
-    </div>
-  </body>
+          <a href="https://example.com/speaker" class="btn btn--service" target="_blank" rel="noopener">
+            <span class="btn__bar"></span>
+            <span class="btn__icon" aria-hidden="true">
+              <img src="icons/icon4.svg" alt="">
+            </span>
+            <span class="btn__text">СТАТЬ СПИКЕРОМ/<br>ПАРТНЕРОМ ПРОЕКТА</span>
+          </a>
+          <a href="https://example.com/networking" class="btn btn--service" target="_blank" rel="noopener">
+            <span class="btn__bar"></span>
+            <span class="btn__icon" aria-hidden="true">
+              <img src="icons/icon5.svg" alt="">
+            </span>
+            <span class="btn__text">ПРИНЯТЬ УЧАСТИЕ В<br>НЕТВОРКИНГЕ</span>
+          </a>
+          <a href="https://example.com/consultation" class="btn btn--service" target="_blank" rel="noopener">
+            <span class="btn__bar"></span>
+            <span class="btn__icon" aria-hidden="true">
+              <img src="icons/icon6.svg" alt="">
+            </span>
+            <span class="btn__text">КОНСУЛЬТАЦИЯ<br>ПО ПРОЕКТНОЙ<br>ДЕЯТЕЛЬНОСТИ</span>
+          </a>
+          <a href="https://example.com/course" class="btn btn--service" target="_blank" rel="noopener">
+            <span class="btn__bar"></span>
+            <span class="btn__icon" aria-hidden="true">
+              <img src="icons/icon7.svg" alt="">
+            </span>
+            <span class="btn__text">ОБРАЗОВАТЕЛЬНЫЙ КУРС<br>«МЕНЕДЖЕР ПРОЕКТОВ»</span>
+          </a>
+          <a href="https://t.me/example" class="btn btn--service" target="_blank" rel="noopener">
+            <span class="btn__bar"></span>
+            <span class="btn__icon" aria-hidden="true">
+              <img src="icons/icon8.svg" alt="">
+            </span>
+            <span class="btn__text">НАШ ТЕЛЕГРАМ КАНАЛ</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+  </div>
+</body>
 </html>
-
-

@@ -1,0 +1,297 @@
+/* Шрифт UNCAGE-BOLD: положите Uncage-Bold.woff2 / .woff / .ttf в папку fonts/ */
+@font-face {
+  font-family: 'UNCAGE-BOLD';
+  src: url('fonts/Uncage-Bold.woff2') format('woff2'),
+       url('fonts/Uncage-Bold.woff') format('woff'),
+       url('fonts/Uncage-Bold.ttf') format('truetype'),
+       url('fonts/uncage.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --font-main: 'UNCAGE-BOLD', 'Impact', 'Arial Black', sans-serif;
+  /* Фон: синий внизу справа (чуть ярче), чёрный вверху слева */
+  --color-bg-black: #0C0D17;
+  --color-bg-blue: #153a5c;
+  /* Золотые плашки (Figma): светлый желто-золотой → бронзовый */
+  --color-gold-left: #FDD87D;
+  --color-gold-right: #A57726;
+  --color-gold: #c9a227;
+  --color-white: #ffffff;
+  --color-btn-bg: var(--color-bg-black);
+  --radius: 12px;
+  --bar-width: 8px;
+  --bar-inset: 6px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-main);
+  color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  background: var(--color-bg-black);
+}
+
+/* Градиент: от левого нижнего (синий) до правого верхнего (чёрный), в зоне контента/кнопок */
+.page {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  height: 850px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 440px;
+  z-index: -1;
+  /* 45deg: синий вверху слева, чёрный внизу справа */
+  background: linear-gradient(
+    45deg,
+    var(--color-bg-blue) 0%,
+    #0e1828 35%,
+    #0c1220 70%,
+    var(--color-bg-black) 100%
+  );
+  pointer-events: none;
+}
+
+/* Контент поверх фона */
+.header,
+.main {
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+}
+
+/* Header */
+.header {
+  padding: 20px 20px 24px;
+}
+
+.header-inner {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  flex-shrink: 0;
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  /* Чуть правее от левого края экрана */
+  margin-left: 18px;
+}
+
+.logo--placeholder {
+  /* Градиент логотипа (Figma): светлый сине-бирюзовый снизу → яркий голубой сверху */
+  background: linear-gradient(
+    180deg,
+    #7BA3B8 0%,
+    #5B8A9E 40%,
+    #B8D4E3 100%
+  );
+  /* Замените на <img src="ваш-логотип.png" class="logo"> когда будет файл */
+}
+
+.title {
+  margin: 0;
+  margin-top: 6px;
+  margin-left: 0px;
+  font-family: var(--font-main);
+  font-size: clamp(16px, 4.5vw, 22px);
+  font-weight: bold;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.title-line {
+  display: block;
+  font-size: 0.85em;
+}
+
+.title-line--accent {
+  display: block;
+  font-size: 1.15em;
+  color: var(--color-gold-left);
+  background: linear-gradient(90deg, var(--color-gold-right), var(--color-gold-left));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Main */
+.main {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
+}
+
+/* Кнопки по ширине, золотая полоска углублена внутрь (широкая, как на фото) */
+.btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 56px;
+  margin-bottom: 12px;
+  padding: 14px 16px 14px calc(var(--bar-inset) + var(--bar-width) + 12px);
+  background: var(--color-btn-bg);
+  border: none;
+  border-radius: var(--radius);
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Золотая полоска углублена внутрь кнопки, сплюснута по вертикали */
+.btn__bar {
+  position: absolute;
+  left: var(--bar-inset);
+  top: 6px;
+  bottom: 6px;
+  width: var(--bar-width);
+  /* Повторяет скругления кнопки слева */
+  border-radius: calc(var(--radius) - 2px) 0 0 calc(var(--radius) - 2px);
+  /* Градиент: сверху темнее, посередине светлее, снизу темнее */
+  background: linear-gradient(
+    180deg,
+    var(--color-gold-right) 0%,
+    var(--color-gold-left) 50%,
+    var(--color-gold-right) 100%
+  );
+  /* Тень справа для эффекта углубления */
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn__icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: 12px;
+  margin-right: 12px;
+  color: var(--color-gold-left);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.btn__icon--placeholder {
+  background: linear-gradient(
+    90deg,
+    var(--color-gold-left) 0%,
+    var(--color-gold-right) 100%
+  );
+  border-radius: 8px;
+  opacity: 0.9;
+}
+
+.btn__text {
+  flex: 1;
+  line-height: 1.25;
+  /* Сдвиг текста в кнопках правее на 24px */
+  margin-left: 12px;
+}
+
+.btn--primary {
+  min-height: 64px;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.btn--service {
+  min-height: 52px;
+  font-size: 16px;
+}
+
+/* Services section */
+.services {
+  margin-top: 8px;
+}
+
+.services__title {
+  margin: 0 0 20px;
+  font-family: var(--font-main);
+  font-size: clamp(12px, 3.2vw, 14px);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--color-white);
+  line-height: 1.35;
+  padding: 0 8px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+@media (min-width: 480px) {
+  .container,
+  .main,
+  .header-inner {
+    max-width: 440px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+  .btn--primary {
+    font-size: 20px;
+  }
+  .btn--service {
+    font-size: 16px;
+  }
+}
