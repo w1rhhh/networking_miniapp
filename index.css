@@ -1,10 +1,7 @@
 /* Шрифт UNCAGE-BOLD: положите Uncage-Bold.woff2 / .woff / .ttf в папку fonts/ */
 @font-face {
   font-family: 'UNCAGE-BOLD';
-  src: url('fonts/uncage.ttf') format('truetype'),
-       url('fonts/Uncage-Bold.woff2') format('woff2'),
-       url('fonts/Uncage-Bold.woff') format('woff'),
-       url('fonts/Uncage-Bold.ttf') format('truetype');
+  src:url('fonts/uncage.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -162,15 +159,15 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 56px;
+  height: 56px;
   margin-bottom: 12px;
   padding: 14px 16px 14px calc(var(--bar-inset) + var(--bar-width) + 12px);
-  background: var(--color-btn-bg);
+  background: linear-gradient(90deg, rgba(3, 18, 34, 0.18) 0%, rgba(11, 72, 136, 0.18) 83.17%);
   border: none;
-  border-radius: var(--radius);
+  border-radius: 12px;
   color: var(--color-white);
   font-family: var(--font-main);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -189,21 +186,12 @@ body {
 /* Золотая полоска углублена внутрь кнопки, сплюснута по вертикали */
 .btn__bar {
   position: absolute;
-  left: var(--bar-inset);
-  top: 6px;
-  bottom: 6px;
-  width: var(--bar-width);
-  /* Повторяет скругления кнопки слева */
-  border-radius: calc(var(--radius) - 2px) 0 0 calc(var(--radius) - 2px);
-  /* Градиент: сверху темнее, посередине светлее, снизу темнее */
-  background: linear-gradient(
-    180deg,
-    var(--color-gold-right) 0%,
-    var(--color-gold-left) 50%,
-    var(--color-gold-right) 100%
-  );
-  /* Тень справа для эффекта углубления */
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.3);
+  left: 4px;
+  top: 4px;
+  bottom: 4px;
+  width: 8px;
+  border-radius: 20px 0 0 20px;
+  background: linear-gradient(180deg, #dcbe6c, #b4842f 50%, #e9cc76 100%);
 }
 
 .btn__icon {
@@ -250,7 +238,7 @@ body {
 
 .btn--service {
   min-height: 52px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* Services section */
@@ -285,12 +273,12 @@ body {
     max-width: 440px;
   }
   .btn {
-    font-size: 16px;
+    font-size: 14px;
   }
   .btn--primary {
     font-size: 20px;
   }
   .btn--service {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
