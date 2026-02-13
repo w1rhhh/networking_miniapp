@@ -155,7 +155,7 @@ body {
 .price-card__text {
   position: relative;
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
   text-transform: uppercase;
   font-weight: 700;
   font-family: 'UNCAGE', 'Inter', 'Noto Sans', system-ui, -apple-system,
@@ -260,6 +260,7 @@ body {
 .cta:active {
   transform: translateY(1px) scale(0.99);
 }
+
 
 
 
