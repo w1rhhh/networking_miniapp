@@ -263,9 +263,9 @@ body {
 }
 
 .services__title {
-  margin: 0 50px 24px;
+  margin: 0 10px 24px;
   font-family: var(--font-main);
-  font-size: clamp(12px, 3.2vw, 16px);
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -289,12 +289,12 @@ body {
     max-width: 440px;
   }
   .btn {
-    font-size: 14px;
+    font-size: 16px;
   }
   .btn--primary {
     font-size: 20px;
   }
   .btn--service {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
